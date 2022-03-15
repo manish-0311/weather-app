@@ -12,7 +12,7 @@ app.use(express.static(('public')));
 
 app.use(express.urlencoded({extended:true}));
 // Listen for Requests
-app.listen(5000);
+app.listen(process.env.PORT || 3000);
 
 // Responding to initial page loading request
 app.get('/', (req,res) => {
