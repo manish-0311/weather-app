@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <title>Weather | <%= city %> </title>
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <div id="app-title">
+                <h1>Weather Box</h1>
+                <p>view current weather of any city</p>
+            </div>
+        </header>
+
+        <div class="input">
+            <form action="/" method="post">
+                <input type="text" name="city" id="city-input" placeholder="Enter city name">
+            </form>
+
+            <div class="result">
+
+                <!-- for temprature -->
+                <% if (temp !== null) {%>
+                    <h1 class="temp"> <%= temp %> <sup><sup>o</sup></sup>C </h1>
+                <% } %>
+
+                <div class="desc">
+                    <!-- for weather icon  -->
+                    <% if (icon_desc !== null) {%>
+                        <img src="http://openweathermap.org/img/w/<%= icon_desc %>.png" id="icon-desc" alt="weather icon">
+                    <% } %>
+                    
+                    <!-- for weather description  -->
+                    <% if (weather_desc !== null) {%>                    
+                        <h3 class="weather-desc"><%= weather_desc %></h3>
+                    <% } %>
+                </div>
+                <!-- for city name  -->
+                <% if (city !== null) {%>                                    
+                    <p class="city-name"><%= city %></p>
+                <% } %>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

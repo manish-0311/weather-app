@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap');
+
+body {
+    background-color: #312f2f;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    width : 100%;
+    margin: auto;
+    margin: 0em;
+    color:aliceblue ;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.container {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    width: 50%;
+    margin: 20em auto;
+    border-radius: 1em;
+    text-align: center;
+    border: .1em solid black;
+    box-shadow: .15em .15em rgba(42, 42, 40, 0.63);
+    padding: 1em;
+}
+
+#app-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+#app-title p {
+    margin-top: 0em;
+    font-size: 1.5rem;
+}
+#city-input {
+    
+    padding: .7em;
+    background: none;
+    border: none;
+    border-bottom: .15em solid white;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.temp {
+    font-size: 2rem;
+}
+.temp sup {
+    font-size: 1rem;
+}
+#icon-desc {
+    width: 20%;
+    margin-right: 1em;
+}
+.desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-desc {
+    font-size: 1.5rem;
+}
+.city-name {
+    font-size: 2em;
+}
+
+
+/* media queries */
+
+
+@media screen and (max-width : 950px) {
+    
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    
+    html {
+        font-size: 10px;
+    }
+}
